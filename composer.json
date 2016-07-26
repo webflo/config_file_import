@@ -1,0 +1,6 @@
+{
+    "name": "webflo/config_file_import",
+    "type": "drupal-drush",
+    "license": "MIT",
+    "require": {}
+}
