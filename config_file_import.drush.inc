@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Serialization\Yaml;
+
 /**
  * Implements hook_drush_command().
  *
@@ -17,10 +19,10 @@ function config_file_import_drush_command() {
 
 function drush_config_file_import($file) {
   if (!file_exists($file)) {
-    drush_set_error('File does not exist.');
+    return drush_set_error('File does not exist.');
   }
 
-  $content = \Drupal\Component\Serialization\Yaml::decode(file_get_contents($file));
+  $content = Yaml::decode(file_get_contents($file));
   $path = dirname($file);
 
   foreach ($content['files'] as $file) {
