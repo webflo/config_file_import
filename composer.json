@@ -2,5 +2,7 @@
     "name": "webflo/config_file_import",
     "type": "drupal-drush",
     "license": "MIT",
-    "require": {}
+    "require": {
+        "drush/drush": "^9.0@dev"
+    }
 }
